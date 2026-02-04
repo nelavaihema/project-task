@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Form Example</title>
+  <style>
+    body { font-family: Arial; }
+    label { display: block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<form action="submit.html" method="post">
+
+  <label>Name:</label>
+  <input type="text" name="name">
+
+  <label>Number:</label>
+  <input type="number" name="age" min="1" max="100">
+
+  <label>Date:</label>
+  <input type="date" name="dob">
+
+  <label>Date & Time:</label>
+  <input type="datetime-local" name="meeting">
+
+  <label>Month:</label>
+  <input type="month" name="month">
+
+  <label>Week:</label>
+  <input type="week" name="week">
+
+  <label>Range:</label>
+  <input type="range" min="0" max="100">
+
+  <label>Color:</label>
+  <input type="color">
+
+  <label>Upload File:</label>
+  <input type="file">
+
+  <label>Skills:</label>
+  <input type="checkbox"> HTML
+  <input type="checkbox"> CSS
+  <input type="checkbox"> JS
+
+  <label>Country:</label>
+  <select>
+    <option>India</option>
+    <option>USA</option>
+    <option>UK</option>
+  </select>
+
+  <label>Search Tech:</label>
+  <input list="tech">
+  <datalist id="tech">
+    <option value="HTML">
+    <option value="CSS">
+    <option value="JavaScript">
+  </datalist>
+
+  <br><br>
+  <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>

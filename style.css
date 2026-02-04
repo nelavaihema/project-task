@@ -1,0 +1,46 @@
+/* <style> */
+div {
+  /* border: 1px solid gray; */
+  /* padding: 10px; */
+  /* margin: 10px; */
+  font-size: 31px;
+  background-color: aqua;
+}
+* {
+  /* margin: 0;
+  padding: 0; */
+  font-size: 30px;
+}
+
+section {
+  /* border: 2px solid blue; */
+  /* padding: 10px; */
+  /* margin: 10px; */
+  /* font-size: 50px; */
+  background-color: blueviolet;
+}
+article {
+  /* border: 2px solid green; */
+  /* padding: 10px; */
+  /* margin: 10px; */
+  background-color: red;
+  font-size: 29px;
+}
+#mainHeader {
+  background-color: lightblue;
+  text-align: center;
+  /* padding: 20px; */
+}
+
+.text {
+  color: blue;
+  font-size: 16px;
+}
+
+#mainFooter {
+  background-color: lightgray;
+  text-align: center;
+  /* padding: 10px; */
+}
+
+/* </style> */

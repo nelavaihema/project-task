@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    h1 {
+      color: darkblue;
+      font-size: 36px;
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+      text-decoration: underline overline;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      word-spacing: 8px;
+      line-height: 1.5;
+      text-shadow: 2px 2px 5px gray;
+    }
+    /* Pseudo-elements for header */
+    h1::before {
+      content: "★ ";
+      color: gold;
+    }
+
+    h1::after {
+      content: " ★";
+      color: gold;
+    }
+
+    p {
+      color: #333;
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      text-align: justify;
+      text-decoration: none;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      line-height: 2;
+      text-shadow: 1px 1px 2px rgb(135, 27, 157);
+      white-space: normal;
+      text-shadow: 3px 3px 5px gray; /* shadow added */
+      direction: rtl;
+    }
+     p::first-letter {
+      font-size: 30px;
+      font-weight: bold;
+      color: darkred;
+    }
+     li::marker {
+      color: red;
+      font-size: 20px;
+    }
+
+
+    p::first-line {
+      font-weight: bold;
+      color: darkblue;
+    }
+
+    /* Highlight selected text */
+    p::selection {
+      background-color: yellow;
+      color: black;
+    }
+      .rtl::after {
+      content: "↘ ";
+      color: blue;
+      }
+
+    span {
+      color: rgb(128, 39, 39);
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: line-through;
+    }
+    ::placeholder{
+        color: #871212;
+        background-color: aqua;
+    }
+    ::file-selector-button{
+        color: aqua;
+        background-color: black;
+    }
+  </style>
+</head>
+<body>
+
+<h1>All CSS Text Styles Example</h1>
+
+<p>
+This paragraph shows <span>multiple text styles</span> in CSS including <span>letter-spacing</span>, <span>word-spacing</span>, <span>line-height</span>, <span>text-shadow</span>, and <span>text-transform</span>. 
+Lorem Ipsum is used as placeholder text to demonstrate <span>text formatting</span> for better readability.
+</p>
+<p class="rtl">
+    something
+</p>
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ul>
+
+<input type="text" placeholder="Enter your name here"><br>
+<input type="file">
+</body>
+</html>
