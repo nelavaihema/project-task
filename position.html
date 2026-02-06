@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      height: 2000px;
+    }
+
+    .box {
+      width: 150px;
+      height: 80px;
+      padding: 10px;
+      margin: 10px;
+      color: white;
+    }
+
+    .static {
+      position: static;
+      background: gray;
+    }
+
+    .relative {
+      position: relative;
+      top: 20px;
+      left: 30px;
+      background: blue;
+    }
+
+    .parent {
+      position: relative;
+      border: 2px solid black;
+      height: 200px;
+      margin: 20px;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: red;
+    }
+
+    .fixed {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: green;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      background: purple;
+    }
+  </style>
+</head>
+<body>
+
+  <h3 class="sticky box">Sticky Header</h3>
+
+  <div class="box static">Static</div>
+
+  <div class="box relative">Relative</div>
+
+  <div class="parent">
+    Parent
+    <div class="box absolute">Absolute</div>
+  </div>
+
+  <div class="box fixed">Fixed</div>
+
+</body>
+</html>

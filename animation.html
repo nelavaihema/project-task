@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Animation Full Example</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+/* TEXT ANIMATION */
+.text {
+  font-size: 22px;
+  animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+  0%   { color: black; }
+  50%  { color: green; }
+  100% { color: black; }
+}
+
+/* BUTTON ANIMATION */
+.btn {
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* IMAGE ANIMATION */
+img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 20px;
+
+  animation: zoom 3s infinite;
+}
+
+@keyframes zoom {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* BOX ANIMATION */
+.box {
+  width: 150px;
+  height: 150px;
+  background: orange;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 150px;
+
+  animation: rotateBox 2s linear infinite;
+}
+
+@keyframes rotateBox {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* SPINNER */
+.spinner {
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+
+  border: 6px solid #ccc;
+  border-top: 6px solid blue;
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+
+<p class="text">Animated Text</p>
+
+<button class="btn">Animated Button</button>
+
+<br><br>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s">
+
+<div class="box">BOX</div>
+
+<h3>Loading...</h3>
+<div class="spinner"></div>
+
+</body>
+</html>

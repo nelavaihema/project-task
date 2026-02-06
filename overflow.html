@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Styled Layout with Pseudo Classes</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1e1e2f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.navbar a {
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* PSEUDO CLASS */
+.navbar a:hover {
+  color: #4fc3f7;
+}
+
+.navbar a:active {
+  color: orange;
+}
+
+.navbar a:visited {
+  color: #bbb;
+}
+
+/* ---------- PAGE ---------- */
+body {
+  background: #f4f6fb;
+  padding-top: 90px;
+}
+
+/* STICKY */
+.sticky-title {
+  position: sticky;
+  top: 80px;
+  background: #fff;
+  padding: 15px;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-left: 5px solid #4fc3f7;
+}
+
+/* CONTENT SECTION */
+.section {
+  padding: 20px 40px;
+}
+
+/* STATIC */
+.static-box {
+  background: #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* RELATIVE */
+.relative-box {
+  position: relative;
+  background: #d1f2eb;
+  padding: 20px;
+  border-radius: 8px;
+  height: 160px;
+}
+
+/* ABSOLUTE */
+.absolute-box {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff5252;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* INLINE */
+.inline-text {
+  display: inline;
+  background: #fff176;
+  padding: 6px 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+/* BLOCK */
+.block-box {
+  display: block;
+  background: #ffcc80;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* OVERFLOW */
+.overflow-box {
+  background: #fff;
+  max-width: 350px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 8px;
+  overflow: auto;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* IMAGE VISIBILITY */
+.image-box img {
+  width: 180px;
+  visibility: hidden;
+}
+
+/* LIST + PSEUDO */
+.skill-list li:first-child {
+  color: green;
+}
+
+.skill-list li:last-child {
+  color: red;
+}
+
+.skill-list li:nth-child(2) {
+  font-weight: bold;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* PSEUDO */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card:active {
+  transform: scale(0.95);
+}
+
+/* INPUT */
+input {
+  padding: 10px;
+  width: 250px;
+  margin-top: 15px;
+}
+
+/* PSEUDO */
+input:focus {
+  border: 2px solid #4fc3f7;
+  outline: none;
+}
+
+/* FOOTER FIXED */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #1e1e2f;
+  color: #aaa;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">MySite</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- STICKY -->
+<div class="sticky-title">Sticky Section Header</div>
+
+<div class="section">
+
+  <div class="static-box">Static positioned content box</div>
+
+  <div class="relative-box">
+    Relative container
+    <div class="absolute-box">Absolute</div>
+  </div>
+
+  <p style="margin-top:20px;">
+    <span class="inline-text">Inline</span>
+    <span class="inline-text">Inline</span>
+  </p>
+
+  <div class="block-box">Block level element</div>
+
+  <div class="overflow-box">
+    This is long content inside overflow box. Scroll appears when content exceeds height
+    This is long content inside overflow box. Scroll appears when content exceeds height
+    This is long content inside overflow box. Scroll appears when content exceeds height.
+    This is long content inside overflow box. Scroll appears when content exceeds height
+    This is long content inside overflow box. Scroll appears when content exceeds height
+    This is long content inside overflow box. Scroll appears when content exceeds height
+  </div>
+
+  <div class="image-box" style="margin-top:20px;">
+    <p>Image hidden using visibility</p>
+    <img src="https://via.placeholder.com/180">
+  </div>
+
+  <!-- PSEUDO LIST -->
+  <h3 style="margin-top:30px;">Skill List</h3>
+  <ul class="skill-list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <!-- MAP -->
+  <h3 style="margin-top:30px;">Skills Cards (JS map)</h3>
+  <div class="cards" id="cards"></div>
+
+  <input type="text" placeholder="Focus me">
+
+</div>
+
+<div class="footer">Fixed Footer</div>
+
+<script>
+const skills = ["HTML", "CSS", "JavaScript", "React"];
+
+
+</script>
+
+</body>
+</html>

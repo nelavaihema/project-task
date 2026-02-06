@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Border + Padding + Margin</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+/* container to show margin effect */
+.container{
+  border: 3px solid black;
+  padding: 20px;        /* space INSIDE container */
+  margin: 20px auto;    /* space OUTSIDE container */
+  background: white;
+}
+
+/* common box */
+.box{
+  width: 180px;
+  padding: 15px;        /* space between content & border  and inside space of border*/ 
+  margin: 15px;         /* space between boxes  outside space of border */
+  text-align: center;
+  display: inline-block;
+  background: #fafafa;
+}
+
+/* border styles */
+.solid{ border: 3px solid black; }
+.dotted{ border: 3px dotted red; }
+.dashed{ border: 3px dashed blue; }
+.double{ border: 5px double green; }
+.groove{ border: 5px groove gray; }
+.ridge{ border: 5px ridge purple; }
+.inset{ border: 5px inset orange; }
+.outset{ border: 5px outset brown; }
+
+/* different borders on each side */
+.side-border{
+  border-top: 4px solid red;
+  border-right: 4px dashed green;
+  border-bottom: 4px dotted blue;
+  border-left: 4px double black;
+}
+
+/* rounded border */
+.round{
+  border: 3px solid teal;
+  border-radius: 15px;
+}
+
+/* input padding + margin */
+input{
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid gray;
+}
+
+input:focus{
+  border: 3px solid red;
+  outline: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Border + Padding + Margin Demo</h2>
+
+  <div class="box solid">Solid</div>
+  <div class="box dotted">Dotted</div>
+  <div class="box dashed">Dashed</div>
+  <div class="box double">Double</div>
+
+  <div class="box groove">Groove</div>
+  <div class="box ridge">Ridge</div>
+  <div class="box inset">Inset</div>
+  <div class="box outset">Outset</div>
+
+  <div class="box side-border">Side Borders</div>
+  <div class="box round">Rounded</div>
+
+  <br><br>
+  <input type="text" placeholder="Focus to see padding + border">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar Flexbox - Internal CSS</title>
+ 
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: gray;
+    }
+ 
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+ 
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none; 
+      /*   remove dot in navbar */
+      margin: 0;
+      padding: 0;
+    }
+ 
+    .nav-links li a {
+      text-decoration: none;
+      /* remove lines from text */
+      color: white;
+      padding: 8px 12px;
+    }
+ 
+    .nav-links li a:hover {
+      background-color: aquamarine;
+      color: black;
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+  <nav class="navbar">
+    <div class="logo">GUVI LEARNING PLATFORM</div>
+ 
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+ 
+</body>
+</html>
+ 
